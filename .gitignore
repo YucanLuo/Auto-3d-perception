@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Data & results
+data/
+results/
+experiments/logs/
+*.ckpt
+*.pt
+
+# VS Code
+.vscode/
+.ipynb_checkpoints/
+
+# Conda
+env/.conda/
+env/.mamba/
+
+# Docker
+**/.mypy_cache/

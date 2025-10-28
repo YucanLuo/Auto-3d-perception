@@ -1,0 +1,23 @@
+name: pt3d
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pytorch
+  - pytorch-cuda=12.1
+  - torchvision
+  - torchaudio
+  - numpy
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - pandas
+  - pyyaml
+  - tqdm
+  - ipykernel
+  - pip
+  - pip:
+      - open3d
+      # 如果后续用稀疏卷积，可加 spconv-cu121 对应 wheel（等需要再加）
