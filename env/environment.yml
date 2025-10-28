@@ -3,6 +3,8 @@ channels:
   - pytorch
   - nvidia
   - conda-forge
+channel_priority: strict
+
 dependencies:
   - python=3.10
   - pytorch
@@ -17,7 +19,9 @@ dependencies:
   - pyyaml
   - tqdm
   - ipykernel
+  - jupyterlab
   - pip
   - pip:
       - open3d
-      # 如果后续用稀疏卷积，可加 spconv-cu121 对应 wheel（等需要再加）
+
+# 如果后续使用稀疏卷积，可加 spconv-cu121 对应 wheel（等需要再加）
