@@ -3,15 +3,17 @@ channels:
   - pytorch
   - nvidia
   - conda-forge
-channel_priority: strict
-
+channel_priority: flexible
 dependencies:
   - python=3.10
-  - pytorch
+  # PyTorch + CUDA（即使宿主驱动是 13 也可向下兼容 12.1）
+  - pytorch=2.3.*
+  - torchvision=0.18.*
+  - torchaudio=2.3.*
   - pytorch-cuda=12.1
-  - torchvision
-  - torchaudio
-  - numpy
+
+  # 科学计算与工具
+  - numpy=1.26.*
   - scipy
   - scikit-learn
   - matplotlib
@@ -20,8 +22,14 @@ dependencies:
   - tqdm
   - ipykernel
   - jupyterlab
+
+  # 修复 iJIT_NotifyEvent 依赖（防止你之前遇到的符号缺失）
+  - ittnotify
+  - tbb
+  - intel-openmp
+  - libstdcxx-ng
+  - libgcc-ng
+
   - pip
   - pip:
-      - open3d
-
-# 如果后续使用稀疏卷积，可加 spconv-cu121 对应 wheel（等需要再加）
+      - open3d==0.19.0

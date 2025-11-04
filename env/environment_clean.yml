@@ -1,0 +1,4 @@
+name: pt3d
+channels:
+  - defaults
+prefix: /opt/conda/envs/pt3d
