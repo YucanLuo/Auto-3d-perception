@@ -24,7 +24,6 @@ dependencies:
   - jupyterlab
 
   # 修复 iJIT_NotifyEvent 依赖（防止你之前遇到的符号缺失）
-  - ittnotify
   - tbb
   - intel-openmp
   - libstdcxx-ng
